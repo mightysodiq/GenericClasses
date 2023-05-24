@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using task_week_2;
 
 
-public class Stack<T>
+public class Stacking<T>
 {
     private LinkedList<T> list;
 
-    public Stack()
+    public Stacking()
     {
         list = new LinkedList<T>();
     }

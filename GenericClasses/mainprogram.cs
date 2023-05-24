@@ -1,22 +1,25 @@
 ﻿using System;
-using task_week_2;
 
-namespace program
+
+namespace GenericClasses
 {
-    class program
+    class rogram
     {
         static void Main(string[] args)
         {
-            SinglyLinkedList<object> datas = new();
-            datas.Adding("Data");
-            datas.Adding(45);
+            SinglyLinkedList <object> data = new();
+            data.Adding("Data");
+            data.Adding(45);
             
-            Console.WriteLine(datas.Pee);
+            
 
-            Stack<object> stack = new Stack<object>();
-            Queue<object> queue = new Queue<object>();
-           
+            Stacking<string> stack = new Stacking<string>();
+            Stacking<int> stack2 = new Stacking<int>();
+            Queueing<int> queue = new Queueing<int>();
+
+            Console.WriteLine(stack.Peek());
+
         }
     }
-    }
+ 
 }

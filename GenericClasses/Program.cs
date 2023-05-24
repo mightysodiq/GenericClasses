@@ -1,23 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace task_week_2
+namespace GenericClasses
 {
-    public class Node<T>
-    {
-        public T Data { get; set; }
-        public Node<T> Next { get; set; }
-
-        public Node(T data)
-        {
-            Data = data;
-            Next = null;
-        }
-    }
+    
 
     public class SinglyLinkedList<T>
     {
-        private Node<T> head;
+        private Mynode<T> head { set; get; }
         private int count;
 
         public int Count
@@ -32,7 +22,7 @@ namespace task_week_2
 
         public void Adding(T item)
         {
-            Node<T> newNode = new Node<T>(item);
+            Mynode<T> newNode = new Mynode<T>(item);
 
             if (IsEmpty())
             {
@@ -40,7 +30,7 @@ namespace task_week_2
             }
             else
             {
-                Node<T> current = head;
+                Mynode<T> current = head;
                 while (current.Next != null)
                 {
                     current = current.Next;
@@ -64,7 +54,7 @@ namespace task_week_2
                 return true;
             }
 
-            Node<T> current = head;
+            Mynode<T> current = head;
             while (current.Next != null)
             {
                 if (current.Next.Data.Equals(item))
@@ -81,7 +71,7 @@ namespace task_week_2
 
         public bool Check(T item)
         {
-            Node<T> current = head;
+            Mynode<T> current = head;
             while (current != null)
             {
                 if (current.Data.Equals(item))
@@ -95,7 +85,7 @@ namespace task_week_2
 
         public int Index(T item)
         {
-            Node<T> current = head;
+            Mynode<T> current = head;
             int index = 0;
             while (current != null)
             {

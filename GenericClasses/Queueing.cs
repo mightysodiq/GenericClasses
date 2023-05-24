@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using task_week_2;
 
-public class Queue<T>
+public class Queueing<T>
 {
     private LinkedList<T> list;
 
-    public Queue()
+    public Queueing()
     {
         list = new LinkedList<T>();
     }
